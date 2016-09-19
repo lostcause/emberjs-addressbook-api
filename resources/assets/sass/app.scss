@@ -1,0 +1,213 @@
+@import "variables";
+
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.navbar{
+  font-size: 15px;
+}
+
+.error{
+  color:red;
+}
+
+.table{
+  font-size:14px;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #4E5D6C;
+}
+
+.footer > .container {
+  padding: 5px 15px 0;
+  font-size:80%
+}
+
+.navbar-inverse .navbar-nav > li > a.active
+{
+	background: #1967be;
+}
+
+/* Make clicks pass-through */
+#loading-bar,
+#loading-bar-spinner {
+  pointer-events: none;
+  -webkit-pointer-events: none;
+  -webkit-transition: 350ms linear all;
+  -moz-transition: 350ms linear all;
+  -o-transition: 350ms linear all;
+  transition: 350ms linear all;
+}
+
+#loading-bar.ng-enter,
+#loading-bar.ng-leave.ng-leave-active,
+#loading-bar-spinner.ng-enter,
+#loading-bar-spinner.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+#loading-bar.ng-enter.ng-enter-active,
+#loading-bar.ng-leave,
+#loading-bar-spinner.ng-enter.ng-enter-active,
+#loading-bar-spinner.ng-leave {
+  opacity: 1;
+}
+
+#loading-bar .bar {
+  -webkit-transition: width 350ms;
+  -moz-transition: width 350ms;
+  -o-transition: width 350ms;
+  transition: width 350ms;
+
+  background: #29d;
+  position: fixed;
+  z-index: 10002;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-bottom-right-radius: 1px;
+  border-top-right-radius: 1px;
+}
+
+/* Fancy blur effect */
+#loading-bar .peg {
+  position: absolute;
+  width: 70px;
+  right: 0;
+  top: 0;
+  height: 2px;
+  opacity: .45;
+  -moz-box-shadow: #29d 1px 0 6px 1px;
+  -ms-box-shadow: #29d 1px 0 6px 1px;
+  -webkit-box-shadow: #29d 1px 0 6px 1px;
+  box-shadow: #29d 1px 0 6px 1px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+#loading-bar-spinner {
+  display: block;
+  position: fixed;
+  z-index: 10002;
+  top: 10px;
+  left: 10px;
+}
+
+#loading-bar-spinner .spinner-icon {
+  width: 14px;
+  height: 14px;
+
+  border:  solid 2px transparent;
+  border-top-color:  #29d;
+  border-left-color: #29d;
+  border-radius: 10px;
+
+  -webkit-animation: loading-bar-spinner 400ms linear infinite;
+  -moz-animation:    loading-bar-spinner 400ms linear infinite;
+  -ms-animation:     loading-bar-spinner 400ms linear infinite;
+  -o-animation:      loading-bar-spinner 400ms linear infinite;
+  animation:         loading-bar-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes loading-bar-spinner {
+  0%   { -webkit-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-moz-keyframes loading-bar-spinner {
+  0%   { -moz-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-o-keyframes loading-bar-spinner {
+  0%   { -o-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-ms-keyframes loading-bar-spinner {
+  0%   { -ms-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes loading-bar-spinner {
+  0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+a:focus,
+.btn:focus,
+.btn:active,
+.btn:active:focus,
+input[type="checkbox"]:focus {
+	outline: none;
+}
+
+.btn {
+	-webkit-transition: all 0.25s;
+			transition: all 0.25s;
+}
+
+input[type="checkbox"] {
+	position: relative;
+	top: 1px;
+	margin-right: 5px;
+}
+
+.panel {
+	margin-bottom: 50px;
+}
+
+.panel:last-child {
+	margin-bottom: 0;
+}
+
+.panel-body {
+	padding: 30px 20px 20px;
+}
+
+.panel-body ul {
+	padding-left: 0;
+}
+
+.panel-body ul li {
+	position: relative;
+	padding: 5px 75px 5px 30px;
+	margin-bottom: 3px;
+}
+
+.panel-body ul li:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+.panel-body ul li .btn {
+	font-size: 13px;
+	padding: 6px 10px;
+}
+
+.panel-body ul li input[type="checkbox"] {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.panel-body ul li:last-child {
+	margin-bottom: 0;
+}
+
+.panel-body ul li label {
+	margin-top: 5px;
+}
+
+.panel-body ul li .btn-actions {
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+}
